@@ -4,6 +4,24 @@
 
 問題概要はコンテスト開始時に公開予定です。
 
+## サンプルコード
+
+2024-12-27 : 以下の言語でサンプルコードを提供予定です。
+現在 Hello World! を公開しています。サンプルコードの言語・ライブラリ確認にご利用ください。
+
+- [Python](py)
+  - Python 3.11 以上と、 `pip install requests` が必要
+- [C#](cs)
+  - .NET 8 で動作確認
+- [Go](go)
+  - go1.17.13 で動作確認
+- [Rust](rust)
+  - cargo 1.82.0 で動作確認
+- [C++](cpp)
+  - g++ (Ubuntu 11.4.0-1ubuntu1~22.04) で動作確認
+  - libcurl4-openssl-dev 7.81.0-1ubuntu1.20
+  - nlohmann-json3-dev 3.10.5-2
+
 ## ルール
 
 - コンテスト期間
