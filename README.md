@@ -1,6 +1,8 @@
 # 天下一 Game Battle Contest 2024
 
 - [公式サイト](https://tenka1.klab.jp/2024/)
+- [ポータルサイト](https://2024.gcp.tenka1.klab.jp/portal/index.html)
+- [YouTube配信](https://www.youtube.com/watch?v=jYSpojU0xXU)
 
 問題概要はコンテスト開始時に公開予定です。
 
