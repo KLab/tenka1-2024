@@ -4,12 +4,14 @@
 - [ポータルサイト](https://2024.gcp.tenka1.klab.jp/portal/index.html)
 - [YouTube配信](https://www.youtube.com/watch?v=jYSpojU0xXU)
 
-問題概要はコンテスト開始時に公開予定です。
+## ドキュメント
+
+- [問題概要スライド](abstract.pdf)
+- [問題概要およびAPI仕様](problem.md)
+- [ポータルの使い方](portal.md)
+- [チュートリアル](tutorial.md)
 
 ## サンプルコード
-
-2024-12-27 : 以下の言語でサンプルコードを提供予定です。
-現在 Hello World! を公開しています。サンプルコードの言語・ライブラリ確認にご利用ください。
 
 - [Python](py)
   - Python 3.11 以上と、 `pip install requests` が必要
