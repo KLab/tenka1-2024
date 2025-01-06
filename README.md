@@ -26,6 +26,12 @@
   - libcurl4-openssl-dev 7.81.0-1ubuntu1.20
   - nlohmann-json3-dev 3.10.5-2
 
+## コンテスト結果
+
+- [最終ランキング](lottery/result.tsv)
+- [各ゲームの結果](result/ranking.tsv)
+- [各ゲームの入出力](https://tenka1.klab.jp/2024/result.zip) (106.8 MiB)
+
 ## ルール
 
 - コンテスト期間
@@ -41,3 +47,4 @@
 ## その他
 
 - [ギフトカード抽選プログラム](lottery/lottery.py)
+  - [実行結果](lottery/output.txt)
