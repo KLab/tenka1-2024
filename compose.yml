@@ -1,0 +1,37 @@
+services:
+  gamedb:
+    image: redis:5.0.5
+    volumes:
+      - gamedbvolume:/data
+
+  game:
+    build:
+      context: ./game
+    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
+    restart: on-failure
+    environment:
+      - GAMEDB_HOST=gamedb
+      - GAMEDB_PORT=6379
+      - API_PORT=8080
+
+  batch:
+    build:
+      context: ./game
+    command: python -c 'import batch; batch.main()'
+    restart: on-failure
+    environment:
+      - GAMEDB_HOST=gamedb
+      - GAMEDB_PORT=6379
+
+  lb:
+    build: ./lb
+    depends_on:
+    - game
+    ports:
+    - 8080:80
+    volumes:
+    - ./lb/nginx.conf:/etc/nginx/nginx.conf
+    - ./lb/mime.types:/etc/nginx/mime.types
+
+volumes:
+  gamedbvolume:

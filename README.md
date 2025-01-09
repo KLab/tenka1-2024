@@ -1,7 +1,6 @@
 # 天下一 Game Battle Contest 2024
 
 - [公式サイト](https://tenka1.klab.jp/2024/)
-- [ポータルサイト](https://2024.gcp.tenka1.klab.jp/portal/index.html)
 - [YouTube配信](https://www.youtube.com/watch?v=jYSpojU0xXU)
 
 ## ドキュメント
@@ -31,6 +30,43 @@
 - [最終ランキング](lottery/result.tsv)
 - [各ゲームの結果](result/ranking.tsv)
 - [各ゲームの入出力](https://tenka1.klab.jp/2024/result.zip) (106.8 MiB)
+
+
+## ローカル実行
+ゲームサーバーを動作させるdockerファイルを用意しました。
+
+docker をインストールした環境で、以下のコマンドを実行してください。
+
+起動
+```
+$ docker compose up
+```
+
+ユーザー登録
+```
+# ユーザID: user0001 トークン: token0001 のユーザーを作成
+$ docker compose exec gamedb redis-cli HSET user_token token0001 user0001
+```
+
+以下のURLでAPI、SVGビジュアライザ、WebGLビジュアライザにアクセス可能です。
+- http://localhost:8080/api/state/token0001
+- http://localhost:8080/portal/index.html
+- http://localhost:8080/visualizer/index.html?user_id=user0001&token=token0001
+
+BOTプログラムはGAME_SERVERのURLとして `http://localhost:8080` を設定してください。
+
+
+## ビジュアライザで使用したライブラリ等
+- SVGビジュアライザ
+  - [license.csv](lb/portal/license.csv) を参照してください。
+
+- WebGLビジュアライザ本体 © 2024 KLab Inc. All rights reserved.
+  - Game BGM and SE by KLab Sound Team © 2023 KLab Inc. All rights reserved.
+  - [Hurisake.JsonDeserializer by hasipon](https://github.com/hasipon/Hurisake.JsonDeserializer)
+  - [TextShader(MIT) © gam0022](https://qiita.com/gam0022/items/f3b7a3e9821a67a5b0f3)
+  - [Rajdhani (OFL) © Indian Type Foundry](https://fonts.google.com/specimen/Rajdhani)
+  - [Courier Prime (OFL) © The Courier Prime Project Authors](https://fonts.google.com/specimen/Courier+Prime)
+  - [Source Sans 3 (OFL) © 2010-2020 Adobe](https://fonts.google.com/specimen/Source+Sans+3)
 
 ## ルール
 

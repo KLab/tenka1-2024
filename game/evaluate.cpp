@@ -142,7 +142,11 @@ struct CalcScore {
         py = py + vy + 0.5 * ay;
         vx = vx + ax;
         vy = vy + ay;
-        cout << setprecision(16) << px << " " << py << " " << vx << " " << vy << " " << score << endl;
+        unsigned u = 0;
+        for (unsigned i = 0; i < usedOptional.size(); ++ i) {
+            if (usedOptional[i]) u |= 1 << i;
+        }
+        cout << setprecision(16) << px << " " << py << " " << vx << " " << vy << " " << score << " " << targetIdx << " " << u << endl;
     }
 
     void calc_score(const vector<double>& plan) {
